@@ -6,6 +6,9 @@
     <title>Portfolio Aylin</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="codigo.js"></script>
 </head>
 <header>
     <div class="imagen">
@@ -14,11 +17,13 @@
     <div class="banner">
         <h1>¡Hola! </h1>
         <h1 class="titulo">Soy la programadora Aylin</h1>
-        <ul>
-            <li ><a href="#Perfil"> <span> Sobre mi </span></a> </li>
-            <li ><a href="#proyectos">  <span>Mis proyectos </span></a></li>
-            <li ><a href="#contacto"><span> Mi contacto</span></a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li ><a href="#Perfil"> <span> Sobre mi </span></a> </li>
+                <li ><a href="#proyectos">  <span>Mis proyectos </span></a></li>
+                <li ><a href="#contacto"><span> Mi contacto</span></a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 <body>
@@ -26,51 +31,113 @@
         Te presento mi Portfolio
     </h1>
     <section id="Perfil">
-
-        <div class="personal"> 
-            <img class="caja1" src="mapa.jpeg" alt="Las tunas" >
-            <p class="caja1">Tengo 22 años y vivo en Zona norte de Buenos Aires, Argentina. 
-                Me interesé en la Programación con un taller que tuve en mi secundaria 
-                por digital house de programación básica. Habia hecho mi primer trabajo grupal que fue una calculadora bastante simple. Luego, me inscribí a Ingeniería en Informática en la Universidad de Buenos Aires.</p>
-        </div>
-        <div class="experiencia">
-            <h1>Experiencia Laboral</h1>
-            <p>
-                Trabajé desde 2022 a 2024 en Fundación María de Guadalupe dando talleres para alumnos de secundaria
-                y en el area de Administración.
-                En Administración realice tareas de imputación, atención al cliente de forma virtual y presencial,
-                orden de pago, cobro, cierre de caja y exportación de haberes.
-                Por otro lado, en el area Pedagogico aprendi bastante a aprender a enseñar, fue un gran desafio 
-                los primeros meses, pase por diferentes grupos reemplazando a profesores que enseñaban programación básico y estructura
-                de datos, diagramas de flujo y entendimiento
-            </p>
-        </div>
-        <div class="estudios">
-            <h1>Estudios Superiores</h1>
-            <p>
-                En Agosto de 2023 empecé la Tecnicatura en Programación en la UTN de General Pacheco.
-                anteriormente, habia aprendido por mi cuenta el algoritmo de hacer ejercicos con python haciendo ejercicios
-                con clases,listas enlazadas, pilas y colas. Sin embargo, estudiando en la universidad aprendí a realizar
-                diferentes trabajos y razonamientos en grupos.
-            </p>
+        <div class="sobre-mi">
+            <div class="personal"> 
+                <h2>Un poco de mi</h2>
+                <p >
+                    Tengo 22 años y vivo en Zona norte de Buenos Aires, Argentina. <br> <br>
+                    Me interesé en la Programación con un taller que tuve en mi secundaria 
+                    por Digital House de programación básica.<br> <br>
+                    Habia hecho mi primer trabajo grupal que fue una calculadora bastante simple. 
+                    Descubrí que soy una persona resolutiva, que se adapta muy bien a los cambios y que ante la presión, mantengo
+                    la calma a mi alrededor y hago que el problema quede desmenuzado para poder actuar de forma segura.
+                    Una de mis habilidades fuertes es la escucha activa y creo que con esto, entendí que debía ser programadora.
+                </p>
+            </div>
+            <div class="personal">
+                <h2>Experiencia Laboral</h2>
+                <p>
+                    Trabajé desde 2022 a 2024 en Fundación María de Guadalupe dando talleres para alumnos de secundaria
+                    y en el area de Administración. <br> <br>
+                    En Administración realice tareas de imputación, atención al cliente de forma virtual y presencial,
+                    orden de pago, cobro, cierre de caja y exportación de haberes. <br> <br>
+                    Por otro lado, en el area Pedagogico aprendi bastante a "Aprender a enseñar" <br>
+                    fue un gran desafio 
+                    los primeros meses, pase por diferentes grupos reemplazando a profesores que enseñaban programación básico y estructura
+                    de datos, diagramas de flujo y entendimiento
+                </p>
+            </div>
+            <div class="personal">
+                <h2>Estudios Superiores</h2>
+                <p >
+                    Estudié Ingeniería en Informática en la UBA, los primeros años estuvieron llenos de desafios y finalmente,
+                    En Agosto de 2023 empecé la Tecnicatura en Programación en la UTN de General Pacheco, postergando mis estudios en la ingenieria para
+                    conseguir un trabajo estable que me permita seguir estudiando <br>
+                    anteriormente, habia aprendido el algoritmo de hacer ejercicos con python practicando con ejercicios
+                    de clases, listas enlazadas, pilas y colas. <br>
+                    Sin embargo, estudiando en la Universidad Tecnologica Nacional aprendí a realizar
+                    diferentes trabajos y razonamientos en grupos, conociendo a compañeros muy inteligentes y profesores muy sabios 
+                    que inspiran a seguir estudiando y aprendiendo sobre las nuevas tecnoplogías.
+                </p>
+            </div>
         </div>
     </section>
-
+    <h1 class="titulo-proyecto">Mis Proyectos</h1>
     <section id="proyectos">
-        <div class="Juego CLUCH">
-
+        <div class="maqueta">
+            <div class="iniciales">
+                <h2>Juego CLUCH</h2>
+                <p> 
+                    Fue mi primer trabajo práctico en la carrera y mi primer juego a realizar. <br>
+                    realizamos un juego con mis compañeros llamado CLUTCH que es para dos jugadores, se utilizan cartas seleccionadas de un mazo de la baraja Francesa y un dado de seis caras.
+                    El objetivo es formar una escalera en el órden: 10 - J - Q - K - A una vez que uno de los jugadores logra formarla, finaliza el juego.
+                </p>
+            </div>
+            <div class="iniciales">
+                <h2>Desarrollo de Gestion</h2>
+                <p>
+                    Junto a tres compañeros de la facultad realizamos este trabajo práctico que surgió de la idea de 
+                    ayudar a emprendedores que recien comienzan a organizar sus productos <br>
+                    En un principio eramos cuatro compañeros, uno en medio del trabajo se bajo de la materia mientras teniamos
+                    bastante cortos los tiempos dado que todos estudiabamos y trabajabamos a la vez. 
+                    Sin embargo, pudimos remontar y organizarnos bien para terminar en la fecha estimada. <br>
+                    Utilizamos c++ y trabajamos con programación orientada a objetos.
+                </p>
+            </div>
+            <div class="iniciales">
+                <h2>Mi primer blog</h2>
+                <p>
+                    Cuando empecé el cbc sucedió la pandemia por lo que las clases se atrasaron unos cuatros meses, empezando a estudiar en Junio. <br>
+                    en esos mese aproveche para estudiar de forma autonoma la estructura básica de una página web,
+                    de lo cual salió un pequeño diseño hecho con HTML, CSS y Bootstrap. <br>
+                    Desde la secundaria era una chica proactiva y me gustaba estar en movimiento constante, por lo que empezar a estar unicamente en casa 
+                    fue muy nuevo para mí, pero logré adaptarme muy bien a este cambio y ayudar a mi familia en lo que podía. 
+                </p>
+                <a href="https://blog-aylin.netlify.app/" target="_blank"> Mi blog</a>
+            </div>
         </div>
     </section>
 
 </body>
 <footer>
+    <h1 class="titulo-contacto">Contacto</h1>
     <section id="contacto">
-        <div class="copyRigth">
-            <small>Copyright © 2024 Aylin Paniagua</small>
-        </div>
-        <div>
-
+        
+        <div class="caja-contacto">
+            <form id="formContacto">
+                <label for="name">Nombre: </label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="mail">Correo Electrónico: </label>
+                <input type="mail" name="mail" id="mail" required>
+            
+                <label for="message">Te contacto por que: </label>
+                <textarea name="message" id="message" required></textarea>
+            
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="redes">
+                <h2>Mis redes son</h2>
+                <a href="https://www.linkedin.com/in/aylin-paniagua/" target="_blank"><i class="fab fa-linkedin"></i>Linkedin</a>
+                <a href="https://github.com/aylindaiana" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+                <a href="https://x.com/accxn05" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+            </div>
+            <div id="automensaje"></div>
         </div>
     </section>
+    
+    <div class="copyRigth">
+        <small>Copyright © 2024 Aylin Paniagua</small>
+    </div>
 </footer>
 </html>

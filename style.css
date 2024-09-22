@@ -28,9 +28,12 @@ footer{
 
 }
 /*header*/
+
 .imagen {
-    padding: 5px 50px 7px;
+    padding: 12px 50px 12px;
+    display: flex;
 }
+
 nav {
     background-color: aquamarine;
     padding: 10px 0;
@@ -59,7 +62,7 @@ ul {
 }
 
 li {
-    font-size: 25px;
+    font-size: 20px;
     width: 10em;
     height: 2em;
     color: orange;
@@ -113,6 +116,10 @@ li span {
 li:hover span {
     transform: translateX(0.25em);
 }
+.hola {
+    font-size: 40px;
+    font-family: sans-serif;
+}
 h1 .titulo{
     font-size: 6em;
     color:  #ff5733;
@@ -122,7 +129,7 @@ h1 .titulo{
     transition: transform 0.3s;
 }
 .titulo:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
 /*body*/
 
@@ -171,7 +178,9 @@ h1 .titulo{
 .personal h2 {
     margin-top: 0;
 }
-
+p {
+    background-color: #8ddace;
+}
 .titulo-proyecto {
     padding: 10px 3px 10px 10px;
     font-size: 45px;
@@ -222,6 +231,52 @@ h1 .titulo{
 p {
     padding: 10px 5px 5px 10px;
 }
+.titulo-tecnologia{
+    padding: 10px 3px 10px 10px;
+    font-size: 45px;
+    color: #877878;
+    background-color:rgb(9, 234, 159);
+}
+.titulo-tecnologia:hover{
+    transform:scale(0.9)
+}
+#tecnologias{
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
+.caja2{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.tecno {
+    font-size: 15px;
+    background-color: #f4f4f4;
+    border: 5px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    flex:1;
+    margin: 0 10px;
+}
+.tecno h2 {
+    margin-top: 0;
+}
+.tecno a{
+    display: block;
+    align-items: center;
+    background-color: #49b94d;
+    color: rgb(251, 251, 251);
+    padding: 10px 5px 10px 10px;
+    border-radius: 50px;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+.tecno a:hover {
+    background-color: #19641d;
+}
 
 /* footer*/
 .titulo-contacto {
@@ -260,6 +315,8 @@ label {
     font-size: 20px;
     margin-left: 10px;
     font-weight: bold;
+    background-color: rgb(57, 246, 183);
+    cursor: pointer;
 }
 input, textarea {
     width: 95%;
@@ -308,6 +365,7 @@ button:hover {
     font-size: 35px;
     border-radius: 5px;
 }
+
 .copyRight {
     text-align: center;
     align-items: center;

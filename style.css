@@ -1,5 +1,4 @@
 *{
-    background-color: aquamarine;
     border-radius: 30px;
 }
 header {
@@ -8,14 +7,12 @@ header {
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #0aa997;
-    position: relative;
+    background-color: #d9c3fa;
 }
 body {
-    height: 50vh;
-    padding: 20px;
+    display: inline;
     text-align: center;
-    background-color: aquamarine;
+    background-color: #bfabf5;
 
 }
 footer{
@@ -24,19 +21,21 @@ footer{
     padding: 10px 0;
     position: relative;
     justify-content: center;
-    background-color: aquamarine;
+    background-color: #bfabf5;
 
 }
 /*header*/
-
-.imagen {
-    padding: 12px 50px 12px;
-    display: flex;
-}
-
 nav {
-    background-color: aquamarine;
-    padding: 10px 0;
+    background-color: rgba(126, 87, 194, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 5px 0;
+    z-index: 1000;
+    border-radius: 0px;
+    
+    
 }
 nav ul {
     list-style: none;
@@ -65,16 +64,17 @@ li {
     font-size: 20px;
     width: 10em;
     height: 2em;
-    color: orange;
+    color: #a492f0;
     border-left: 0.08em solid;
     position: relative;
     margin-top: 0.8em;
     cursor: pointer;
 }
 
+
 li::before,
 li::after
- {
+{
     content: '';
     position: absolute;
     width: inherit;
@@ -102,7 +102,7 @@ li span {
     top: -10%;
     box-sizing: border-box;
     border: 0.08em solid;
-    background-color: #b84a4a;
+    background-color: #1a0b7a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,10 +119,16 @@ li:hover span {
 .hola {
     font-size: 40px;
     font-family: sans-serif;
+    display: flex;
+    flex: 2;
+}
+.titulo {
+    display: flex;
+    flex: 2;
 }
 h1 .titulo{
     font-size: 6em;
-    color:  #ff5733;
+    color:  #8a7aeb;
     text-shadow:  2px 2px 5px rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 10px 0px;
@@ -131,13 +137,56 @@ h1 .titulo{
 .titulo:hover {
     transform: scale(0.9);
 }
+.container {   
+    display: grid;
+    
+    padding: 5px 10px;
+    width: 100%;
+    height: 100%;
+    background-color: #a492f0;
+    border-radius: 15px;
+    justify-content: space-around;
+    align-content: center;
+}
+.box1 {
+    justify-content: center;
+    position: fixed; /* Fija la barra en su lugar */
+    top: 0; /* Posición en la parte superior */
+    width: 95%; /* Hace que ocupe el 100% del ancho de la ventana */
+    background-color: #333;
+    color: white;
+    z-index: 1000;/* Asegura que la barra esté por encima de otros elementos */
+    
+}
+.cara {
+    border-radius: 45px;
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.box2 { /*aca esta la foto de cara*/
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.box3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+    grid-row-start: 2;
+    margin-top: 15%;
+
+}
 /*body*/
 
 .titulo-principal{
     padding: 20px 30px 30px 10px;
     font-size: 50px;
     color: #333;
-    background-color: #45a049;
+    background-color: #8a7aeb;
 }
 .titulo-principal:hover {
     transform:scale(0.9)
@@ -151,7 +200,7 @@ h1 .titulo{
     padding: 20px 30px 30px 10px;
     font-size: 50px;
     color: #333;
-    background-color: #45a049;
+    background-color: #8a7aeb;
 }
 .titulo-principal:hover {
     transform:scale(0.9)
@@ -167,7 +216,7 @@ h1 .titulo{
 }
 .personal {
     font-size: 18px;
-    background-color: #f4f4f4;
+    background-color: #d9c3fa;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
@@ -179,13 +228,13 @@ h1 .titulo{
     margin-top: 0;
 }
 p {
-    background-color: #8ddace;
+    background-color: #f3dbff;
 }
 .titulo-proyecto {
     padding: 10px 3px 10px 10px;
     font-size: 45px;
     color: #877878;
-    background-color:rgb(9, 234, 159);
+    background-color:#d9c3fa;
 }
 .titulo-proyecto:hover{
     transform:scale(0.9)
@@ -193,7 +242,7 @@ p {
 #proyectos {
     margin: 20px 0;
     border-radius: 10px;
-    background-color: aquamarine;
+    background-color: #8a7aeb;
 }
 .maqueta {
     display: flex;
@@ -216,7 +265,7 @@ p {
 .iniciales a{
     display: block;
     align-items: center;
-    background-color: #49b94d;
+    background-color: #a492f0;
     color: rgb(251, 251, 251);
     padding: 10px 5px 10px 10px;
     border-radius: 50px;
@@ -226,7 +275,7 @@ p {
     font-weight: bold;
 }
 .iniciales a:hover {
-    background-color: #19641d;
+    background-color: #8a7aeb;
 }
 p {
     padding: 10px 5px 5px 10px;
@@ -235,7 +284,7 @@ p {
     padding: 10px 3px 10px 10px;
     font-size: 45px;
     color: #877878;
-    background-color:rgb(9, 234, 159);
+    background-color:#d9c3fa;
 }
 .titulo-tecnologia:hover{
     transform:scale(0.9)
@@ -243,7 +292,7 @@ p {
 #tecnologias{
     margin: 20px 0;
     border-radius: 10px;
-    background-color: aquamarine;
+    background-color: #8a7aeb;
 }
 .caja2{
     display: flex;
@@ -265,7 +314,7 @@ p {
 .tecno a{
     display: block;
     align-items: center;
-    background-color: #49b94d;
+    background-color: #8a7aeb;
     color: rgb(251, 251, 251);
     padding: 10px 5px 10px 10px;
     border-radius: 50px;
@@ -275,7 +324,7 @@ p {
     font-weight: bold;
 }
 .tecno a:hover {
-    background-color: #19641d;
+    background-color: #8a7aeb;
 }
 
 /* footer*/
@@ -283,7 +332,7 @@ p {
     padding: 10px 3px 10px 10px;
     font-size: 45px;
     color: #877878;
-    background-color:rgb(9, 234, 159);
+    background-color:#d9c3fa;
 }
 .titulo-contacto:hover{
     transform:scale(0.9)
@@ -292,7 +341,7 @@ p {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    background: #fff;
+    background: #a492f0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -302,7 +351,7 @@ form {
     flex:1;
     margin-right: 20px;
     width: 500px;
-    background: #c63939;
+    background: #8a7aeb;
     padding: 30px;
     border-radius: 35px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -315,7 +364,7 @@ label {
     font-size: 20px;
     margin-left: 10px;
     font-weight: bold;
-    background-color: rgb(57, 246, 183);
+    background-color: #bfabf5;
     cursor: pointer;
 }
 input, textarea {
@@ -323,34 +372,33 @@ input, textarea {
     padding: 10px 0px 5px 5px;
     margin-top: 5px;
     margin-left: 10px;
-    border: 1px solid #1c01ec;
+    border: 1px solid #8a7aeb;
     border-radius: 10px;
     display: block;
 
 }
 button {
     margin-top: 10px;
-    background-color: #4CAF50;
+    background-color: #bfabf5;
     color: white;
     border: none;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
-button:hover {
-    background-color: #45a049;
+button:hover {#f3dbff#45a049;
 }
 .redes {
     flex: 1;
     flex-direction: column;
-    background-color: #c63939;
+    background-color: #8a7aeb;
     padding: 35px 35px 30px 30px;
 }
 .redes a{
     display: block;
     align-items: center;
-    background-color: #49b94d;
-    color: rgb(251, 251, 251);
+    background-color: #a492f0;
+    color: #f3dbff;
     padding: 10px 5px 10px 10px;
     border-radius: 50px;
     margin: 5px 0;
@@ -358,15 +406,26 @@ button:hover {
     transition: background-color 0.3s;
 }
 .redes a:hover {
-    background-color: #19641d;
+    background-color: #8a7aeb;
 }
 .redes i{
     margin-right: 10px;
     font-size: 35px;
     border-radius: 5px;
 }
+.redes h2 {
+    background-color:#bfabf5;
+}
 
 .copyRight {
     text-align: center;
     align-items: center;
+}
+/*RESPONSIVE*/
+
+@media (max-width: 768px) {
+    .box1{
+        display:none; 
+    }
+
 }

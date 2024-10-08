@@ -159,11 +159,18 @@ h1 .titulo{
     
 }
 .cara {
-    border-radius: 45px;
-    width: 300px;
-    height: auto;
     object-fit: cover;
-
+    width: 300px; /* Ajusta la imagen al contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 50%; /* Hace la imagen circular */
+    animation: float 3s ease-in-out infinite; /* Añade animación de flotación */
+    border: 3px solid #e19874;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+}
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Cambia la altura de la flotación */
+    100% { transform: translateY(0); }
 }
 
 .box2 { /*aca esta la foto de cara*/
@@ -171,8 +178,17 @@ h1 .titulo{
     grid-row: span 2 / span 2;
     grid-column-start: 2;
     grid-row-start: 2;
+   
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;   
 }
-
+.box2:hover .cara {
+    animation: main_avatar_animation 2s linear infinite;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    
+}
 .box3 {
     grid-row: span 2 / span 2;
     grid-column-start: 4;
@@ -218,7 +234,10 @@ h1 .titulo{
     font-size: 18px;
     background-color: #d9c3fa;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 37px;
+background: linear-gradient(145deg, #9483d8, #af9cff);
+box-shadow:  24px 24px 33px #7063a3,
+             -24px -24px 33px #d8c1ff;
     padding: 20px;
     flex:1;
     margin: 0 10px;
@@ -253,7 +272,11 @@ p {
     font-size: 18px;
     background-color: #f4f4f4;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 37px;
+background: linear-gradient(145deg, #9483d8, #af9cff);
+box-shadow:  24px 24px 33px #7063a3,
+             -24px -24px 33px #d8c1ff;
+    
     padding: 20px;
     flex:1;
     margin: 0 10px;
@@ -265,7 +288,7 @@ p {
 .iniciales a{
     display: block;
     align-items: center;
-    background-color: #a492f0;
+    background-color: rgba(126, 87, 194, 0.8);
     color: rgb(251, 251, 251);
     padding: 10px 5px 10px 10px;
     border-radius: 50px;
@@ -303,7 +326,11 @@ p {
     font-size: 15px;
     background-color: #f4f4f4;
     border: 5px solid #ccc;
-    border-radius: 15px;
+    border-radius: 37px;
+background: linear-gradient(145deg, #9483d8, #af9cff);
+box-shadow:  24px 24px 65px #7468aa,
+             -24px -24px 65px #d4bcff;
+
     padding: 20px;
     flex:1;
     margin: 0 10px;
@@ -427,5 +454,21 @@ button:hover {#f3dbff#45a049;
     .box1{
         display:none; 
     }
+    .contact-form form input, 
+    .contact-form form textarea {
+        font-size: 12px;
+    }
 
+    .profile {
+        width: 70px;
+    }
+
+    .profile img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .profile span {
+        font-size: 12px;
+    }
 }

@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <script src="codigo.js"></script>
+ 
 </head>
 <header>
     <div class="container">
         <div class="box1">
             
-            <nav>
+            <nav class="nav">
                 <ul>
                     <li ><a href="#Perfil"> <span> Sobre mi </span></a> </li>
                     <li ><a href="#proyectos">  <span>Mis Proyectos </span></a></li>
@@ -22,6 +22,9 @@
                     <li ><a href="#contacto"><span>Mi Contacto</span></a></li>
                 </ul>
             </nav>
+            <div class="hamburger" id="hamburger">
+                &#9776;
+            </div>
         </div>
         <div class="box2">
             <img class="cara" src="img/Aylin.jpeg" alt="Aylin Paniagua" >
@@ -33,6 +36,7 @@
 
     </div>
 
+   
 </header>
 <hr/>
 <body>
@@ -188,21 +192,21 @@
             </div>
         </div>
     </section>
-
+    
 </body>
 <footer>
-    <h1 class="titulo-contacto">Contacto</h1>
+    <h1 class="titulo-contacto">¡Hablemos!</h1>
     <section id="contacto">
         
         <div class="caja-contacto">
             <form id="formContacto">
-                <label for="name">Nombre: </label>
+                <label for="name">Mí Nombre es: </label>
                 <input type="text" id="name" name="name" required>
             
                 <label for="mail">Correo Electrónico: </label>
                 <input type="mail" name="mail" id="mail" required>
             
-                <label for="message">Te contacto por que: </label>
+                <label for="message">Te contacto por qué: </label>
                 <textarea name="message" id="message" required></textarea>
             
                 <button type="submit">Enviar</button>
@@ -220,5 +224,7 @@
     <div class="copyRigth">
         <small>Copyright © 2024 Aylin Paniagua</small>
     </div>
+    
 </footer>
+<script src="codigo.js"></script>
 </html>

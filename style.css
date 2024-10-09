@@ -32,10 +32,32 @@ nav {
     top: 0;
     left: 0;
     padding: 5px 0;
-    z-index: 1000;
-    border-radius: 0px;
-    
-    
+    z-index: 1000;  
+    border-radius: 0%;
+}
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .nav ul {
+        display: none;
+        flex-direction: column;
+       
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(126, 87, 194, 0.8);
+    }
+
+    .nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
 nav ul {
     list-style: none;
@@ -58,6 +80,8 @@ ul {
     padding: 25px 100px;
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
 }
 
 li {
@@ -70,7 +94,6 @@ li {
     margin-top: 0.8em;
     cursor: pointer;
 }
-
 
 li::before,
 li::after
@@ -150,26 +173,26 @@ h1 .titulo{
 }
 .box1 {
     justify-content: center;
-    position: fixed; /* Fija la barra en su lugar */
-    top: 0; /* Posición en la parte superior */
-    width: 95%; /* Hace que ocupe el 100% del ancho de la ventana */
-    background-color: #333;
+    position: fixed; 
+    top: 0; 
+    width: 95%; 
+    background-color: #1a0b7a;
     color: white;
-    z-index: 1000;/* Asegura que la barra esté por encima de otros elementos */
+    z-index: 1000;
     
 }
 .cara {
     object-fit: cover;
-    width: 300px; /* Ajusta la imagen al contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
-    border-radius: 50%; /* Hace la imagen circular */
-    animation: float 3s ease-in-out infinite; /* Añade animación de flotación */
+    width: 300px; 
+    height: auto; 
+    border-radius: 50%; 
+    animation: float 3s ease-in-out infinite; 
     border: 3px solid #e19874;
     box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
 }
 @keyframes float {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); } /* Cambia la altura de la flotación */
+    50% { transform: translateY(-10px); } 
     100% { transform: translateY(0); }
 }
 
@@ -186,7 +209,7 @@ h1 .titulo{
 .box2:hover .cara {
     animation: main_avatar_animation 2s linear infinite;
     box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    transform: scale(1.05); 
     
 }
 .box3 {
@@ -194,8 +217,9 @@ h1 .titulo{
     grid-column-start: 4;
     grid-row-start: 2;
     margin-top: 15%;
-
 }
+
+
 /*body*/
 
 .titulo-principal{
@@ -327,10 +351,9 @@ p {
     background-color: #f4f4f4;
     border: 5px solid #ccc;
     border-radius: 37px;
-background: linear-gradient(145deg, #9483d8, #af9cff);
-box-shadow:  24px 24px 65px #7468aa,
+    background: linear-gradient(145deg, #9483d8, #af9cff);
+    box-shadow:  24px 24px 65px #7468aa,
              -24px -24px 65px #d4bcff;
-
     padding: 20px;
     flex:1;
     margin: 0 10px;
@@ -353,6 +376,7 @@ box-shadow:  24px 24px 65px #7468aa,
 .tecno a:hover {
     background-color: #8a7aeb;
 }
+
 
 /* footer*/
 .titulo-contacto {
@@ -413,8 +437,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-button:hover {#f3dbff#45a049;
-}
+
 .redes {
     flex: 1;
     flex-direction: column;
@@ -448,27 +471,109 @@ button:hover {#f3dbff#45a049;
     text-align: center;
     align-items: center;
 }
-/*RESPONSIVE*/
+ /*----------------RESPONSIVE--------------------*/
+ /*headerr*/
+ @media (max-width: 768px) {
+    nav li {
+        display: block; 
+        margin: 10px 0; 
+    }
 
+    h1 .titulo {
+        font-size: 4em; 
+    }
+
+    .box1 {
+        width: 100%; 
+        padding: 10px; 
+        position: relative;
+        display: table-cell;
+    }
+
+    .container {
+        padding: 5px 5px; 
+        display: inline;
+    }
+
+    .cara {
+        width: 200px; 
+    }
+    header {
+        height: 80vh;
+    }
+    .hola, .titulo{
+        font-size: 20px;
+    }
+    .box3{
+        margin-top: 0;
+        display: inline-block;
+    }
+
+}
+/*----------BODY--------------*/
 @media (max-width: 768px) {
-    .box1{
-        display:none; 
-    }
-    .contact-form form input, 
-    .contact-form form textarea {
-        font-size: 12px;
+    .titulo-principal {
+        font-size: 30px; 
     }
 
-    .profile {
-        width: 70px;
+    .sobre-mi {
+        flex-direction: column; 
     }
 
-    .profile img {
-        width: 35px;
-        height: 35px;
+    .personal, .iniciales, .tecno {
+        font-size: 12px; 
+        width: 100%; 
+        padding: 0px;
+        margin: 0px;
+        margin-top: 10px;
+    }
+  
+    .maqueta {
+        flex-direction: column; 
+    }
+    .caja2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    margin-bottom: 20px; /
+    }
+    .tecno{
+        height: fit-content;
+        box-sizing: border-box; /* Para que el padding no afecte el ancho */
+    padding: 10px; /* Espaciado opcional */
+    border: 1px solid #ccc; /* Solo para visualizar los elementos */
+    }
+    img {
+        width: 50px;
+    }
+}
+@media (max-width: 480px) {
+    .titulo-principal {
+        font-size: 25px; 
     }
 
-    .profile span {
-        font-size: 12px;
+    .titulo-proyecto,
+    .titulo-tecnologia {
+        font-size: 35px; 
+    }
+}
+/*----------------------FOOTER--------------------*/
+@media (max-width: 768px) {
+    .titulo-contacto {
+        font-size: 30px; 
+    }
+
+    .caja-contacto {
+        padding: 15px; 
+        display: inline-block;
+    }
+
+    form {
+        width: 90%; 
+        margin: 10px 0; 
+    }
+
+    button {
+        width: 100%;
     }
 }

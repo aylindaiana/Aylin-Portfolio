@@ -1,6 +1,21 @@
+// Toggle para cambiar entre modo claro y oscuro
+const themeToggle = document.getElementById("theme-toggle");
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("light-mode");
+
+    // Cambia el icono del botón
+    if (document.body.classList.contains("dark-mode")) {
+        themeToggle.textContent = "🌞";
+    } else {
+        themeToggle.textContent = "🌙";
+    }
+});
+
 
 const hamburger = document.getElementById('hamburger');
 const nav = document.querySelector('.nav ul');
+
 const navItems = document.querySelectorAll('.nav ul li a');
 hamburger.addEventListener('click', () => {
     nav.classList.toggle('show');

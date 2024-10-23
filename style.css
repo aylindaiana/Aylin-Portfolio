@@ -13,10 +13,18 @@ body {
     display: inline;
     text-align: center;
     background-color: #bfabf5;
+    overflow-x: hidden;
+}
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
 
+body.light-mode {
+    background-color: #fff;
+    color: black;
 }
 footer{
-
     align-items: center;
     padding: 10px 0;
     position: relative;
@@ -31,9 +39,12 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    padding: 5px 0;
-    z-index: 1000;  
-    border-radius: 0%;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;  /* Coloca los elementos a ambos lados */
+    align-items: center;  /* Alinea los elementos verticalmente */
+    box-sizing: border-box; /* Para asegurarse de que los elementos ocupen bien el espacio */
 }
 .hamburger {
     display: none;
@@ -61,18 +72,23 @@ nav {
 }
 nav ul {
     list-style: none;
+    display: flex;
     padding: 0;
-    text-align: center;
+    margin: 0;
 }
-nav li{
-    display: inline;
+
+nav li {
     margin: 0 15px;
+    font-size: 20px;
+    color: #a492f0;
+    display: inline-block;
 }
 nav a{
     color:#e19874;
     text-decoration: none;
     font-weight: bold;
 }
+
 nav a:hover {
     text-decoration: underline;
 }
@@ -139,6 +155,47 @@ li span {
 li:hover span {
     transform: translateX(0.25em);
 }
+/* izquierda  navbar*/
+
+.navbar-right {
+    display: flex;
+    align-items: center; /* Asegura la alineación vertical correcta */
+    gap: 15px;  /* Espacio entre los botones */
+}
+.cv-button a {
+    padding: 10px 15px;
+    background-color: #00bcd4;
+    color: white;
+    display: flex;
+    border-radius: 5px;
+    text-decoration: none;
+    align-items: center;
+    font-weight: bold;
+}
+
+.language-switcher select {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.theme-switcher button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.theme-switcher button:hover {
+    color: #ccc;
+}
+/*Finaliza Navbar*/
 .hola {
     font-size: 40px;
     font-family: sans-serif;
@@ -474,11 +531,33 @@ button {
  /*----------------RESPONSIVE--------------------*/
  /*headerr*/
  @media (max-width: 768px) {
+    *{
+        border-radius: 0px;
+    }
     nav li {
         display: block; 
         margin: 10px 0; 
     }
+    /*agregue*/
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(126, 87, 194, 0.8);
+    }
 
+    .nav ul.show {
+        display: flex;
+    }
+
+
+    .navbar-right {
+        flex-direction: column;
+        margin-right: 20px;
+    }
+    /*finalice*/
     h1 .titulo {
         font-size: 4em; 
     }
@@ -575,5 +654,81 @@ button {
 
     button {
         width: 100%;
+    }
+}
+/*-------------------*/
+
+.contact-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.contact-icons a:hover {
+    color: #00bfff; 
+}
+
+/* Contenedor que oculta los íconos fuera de la vista */
+.tech-icons-wrapper {
+    overflow: hidden; 
+    width: 100%; 
+    height: 100px; 
+    position: relative;
+}
+
+/* Contenedor de los íconos con animación */
+.tech-icons {
+    display: flex; 
+    justify-content: start; 
+    align-items: center;
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite; 
+}
+
+.tech-icons img {
+    flex: 0 0 auto; 
+    width: 80px; 
+    height: 80px;
+    margin: 0 20px; 
+    filter: invert(1); 
+    transition: transform 0.3s ease; 
+}
+
+.tech-icons img:hover {
+    transform: scale(1.2); 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-icons a {
+        font-size: 20px;
+        margin: 0 8px; 
+    }
+
+    .tech-icons img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-icons a {
+        font-size: 18px;
+        margin: 0 5px;
+    }
+
+    .tech-icons img {
+        width: 50px;
+        height: 50px;
     }
 }

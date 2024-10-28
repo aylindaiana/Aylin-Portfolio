@@ -14,20 +14,22 @@ themeToggle.addEventListener("click", () => {
 
 
 const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('.nav ul');
+const nav = document.querySelector('.nav'); // Selecciona todo el contenedor nav
+const navItems = document.querySelectorAll('.nav-links li a'); // Selecciona los enlaces del menú
 
-const navItems = document.querySelectorAll('.nav ul li a');
+// Alternar la visibilidad del menú hamburguesa
 hamburger.addEventListener('click', () => {
-    nav.classList.toggle('show');
+    nav.classList.toggle('show'); // Alterna la clase show en todo el nav
 });
+
+// Cerrar el menú cuando se selecciona un elemento
 navItems.forEach(item => {
     item.addEventListener('click', () => {
-        nav.classList.remove('show'); // Cierra el menú
-        const targetId = item.getAttribute('href'); // Obtén el ID del destino
-        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' }); // Scroll suave al ID
+        nav.classList.remove('show'); // Oculta el menú después de seleccionar una opción
+        const targetId = item.getAttribute('href'); 
+        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
     });
 });
-
 
 document.getElementById('formContacto').addEventListener('submit', function(event){
     event.preventDefault();

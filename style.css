@@ -48,27 +48,42 @@ nav {
 }
 .hamburger {
     display: none;
-    font-size: 28px;
+    font-size: 24px;
     cursor: pointer;
 }
 @media (max-width: 768px) {
-    .nav ul {
-        display: none;
-        flex-direction: column;
-       
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: rgba(126, 87, 194, 0.8);
-    }
-
-    .nav ul.show {
-        display: flex;
-    }
-
     .hamburger {
         display: block;
     }
+
+    /* Oculta el menú de navegación y las opciones extras */
+    .nav {
+        display: none; /* Oculto por defecto */
+        flex-direction: column;
+        width: 100%;
+        background-color: #5a189a; /* Color de fondo para el menú en móvil */
+        position: absolute;
+        top: 50px; /* Ajusta según el espacio que necesites */
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav.show {
+        display: flex; /* Muestra el menú cuando está activo */
+    }
+
+    .nav-links, .navbar-right {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+.nav-links, .navbar-right {
+    display: flex;
 }
 nav ul {
     list-style: none;
@@ -159,8 +174,8 @@ li:hover span {
 
 .navbar-right {
     display: flex;
-    align-items: center; /* Asegura la alineación vertical correcta */
-    gap: 15px;  /* Espacio entre los botones */
+    align-items: center; 
+    gap: 10px;  
 }
 .cv-button a {
     padding: 10px 15px;
@@ -538,26 +553,7 @@ button {
         display: block; 
         margin: 10px 0; 
     }
-    /*agregue*/
-    .nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: rgba(126, 87, 194, 0.8);
-    }
 
-    .nav ul.show {
-        display: flex;
-    }
-
-
-    .navbar-right {
-        flex-direction: column;
-        margin-right: 20px;
-    }
-    /*finalice*/
     h1 .titulo {
         font-size: 4em; 
     }

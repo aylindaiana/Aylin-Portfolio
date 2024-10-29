@@ -543,6 +543,15 @@ button {
     text-align: center;
     align-items: center;
 }
+#message {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 545px; /* Ancho máximo */
+    min-height: 100px; /* Alto mínimo */
+    resize: none; /* Evita que el usuario cambie el tamaño */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #8a7aeb; /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+}
  /*----------------RESPONSIVE--------------------*/
  /*headerr*/
  @media (max-width: 768px) {
@@ -646,10 +655,16 @@ button {
     form {
         width: 90%; 
         margin: 10px 0; 
+        padding: 25px 25px 30px 5px;
+        border-radius: 0px;
     }
 
     button {
         width: 100%;
+    }
+    #message {
+        min-height: 80px; 
+        width: 85%;
     }
 }
 /*-------------------*/

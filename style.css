@@ -10,7 +10,7 @@ header {
     background-color: #d9c3fa;
 }
 body {
-    display: inline;
+    display: block;
     text-align: center;
     background-color: #bfabf5;
     overflow-x: hidden;
@@ -29,7 +29,7 @@ footer{
     padding: 10px 0;
     position: relative;
     justify-content: center;
-    background-color: #bfabf5;
+   /* background-color: #bfabf5;*/
 
 }
 /*header*/
@@ -164,7 +164,7 @@ li span {
     text-transform: capitalize;
     transform: translateX(calc(-0.15em * 3 - 0.08em * 2));
     transition: 0.3s;
-    pointer-events: painted;
+    pointer-events: none;
 }
 
 li:hover span {
@@ -281,6 +281,7 @@ h1 .titulo{
 .box2:hover .cara {
     animation: main_avatar_animation 2s linear infinite;
     box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    transition: transform 0.3s ease-in-out;
     transform: scale(1.05); 
     
 }
@@ -357,7 +358,7 @@ p {
 #proyectos {
     margin: 20px 0;
     border-radius: 10px;
-    background-color: #8a7aeb;
+  /*  background-color: #8a7aeb;*/
 }
 .maqueta {
     display: flex;
@@ -411,7 +412,7 @@ p {
 #tecnologias{
     margin: 20px 0;
     border-radius: 10px;
-    background-color: #8a7aeb;
+   /* background-color: #8a7aeb;*/
 }
 .caja2{
     display: flex;
@@ -451,6 +452,7 @@ p {
 
 
 /* footer*/
+
 .titulo-contacto {
     padding: 10px 3px 10px 10px;
     font-size: 45px;
@@ -464,7 +466,7 @@ p {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    background: #a492f0;
+   /* background: #a492f0;*/
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -544,13 +546,13 @@ button {
     align-items: center;
 }
 #message {
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    max-width: 545px; /* Ancho máximo */
-    min-height: 100px; /* Alto mínimo */
-    resize: none; /* Evita que el usuario cambie el tamaño */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid #8a7aeb; /* Borde */
-    border-radius: 10px; /* Bordes redondeados */
+    width: 100%; 
+    max-width: 545px; 
+    min-height: 100px; 
+    resize: none; 
+    padding: 10px; 
+    border: 1px solid #8a7aeb;
+    border-radius: 10px; 
 }
  /*----------------RESPONSIVE--------------------*/
  /*headerr*/
@@ -623,9 +625,9 @@ button {
     }
     .tecno{
         height: fit-content;
-        box-sizing: border-box; /* Para que el padding no afecte el ancho */
-    padding: 10px; /* Espaciado opcional */
-    border: 1px solid #ccc; /* Solo para visualizar los elementos */
+        box-sizing: border-box; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
     }
     img {
         width: 50px;

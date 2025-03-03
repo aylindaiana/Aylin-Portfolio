@@ -1,6 +1,4 @@
-*{
-    border-radius: 30px;
-}
+
 header {
     height: 60vh;
     display: flex;
@@ -45,6 +43,7 @@ nav {
     justify-content: space-between;  /* Coloca los elementos a ambos lados */
     align-items: center;  /* Alinea los elementos verticalmente */
     box-sizing: border-box; /* Para asegurarse de que los elementos ocupen bien el espacio */
+    
 }
 .hamburger {
     display: none;
@@ -165,6 +164,7 @@ li span {
     transform: translateX(calc(-0.15em * 3 - 0.08em * 2));
     transition: 0.3s;
     pointer-events: none;
+    border-radius: 30px;
 }
 
 li:hover span {
@@ -328,7 +328,7 @@ h1 .titulo{
     margin: 20px 0;
 }
 .personal {
-    font-size: 18px;
+    font-size: 17px;
     background-color: #d9c3fa;
     border: 1px solid #ccc;
     border-radius: 37px;
@@ -366,7 +366,7 @@ p {
     margin: 20px 0;
 }
 .iniciales {
-    font-size: 18px;
+    font-size: 17px;
     background-color: #f4f4f4;
     border: 1px solid #ccc;
     border-radius: 37px;
@@ -420,7 +420,7 @@ p {
     margin: 20px 0;
 }
 .tecno {
-    font-size: 15px;
+    font-size: 17px;
     background-color: #f4f4f4;
     border: 5px solid #ccc;
     border-radius: 37px;

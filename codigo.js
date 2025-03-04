@@ -19,6 +19,7 @@ const navItems = document.querySelectorAll('.nav-links li a'); // Selecciona los
 
 // Alternar la visibilidad del menú hamburguesa
 hamburger.addEventListener('click', () => {
+    event.stopPropagation();
     nav.classList.toggle('show'); // Alterna la clase show en todo el nav
 });
 
@@ -26,9 +27,16 @@ hamburger.addEventListener('click', () => {
 navItems.forEach(item => {
     item.addEventListener('click', () => {
         nav.classList.remove('show'); // Oculta el menú después de seleccionar una opción
-        const targetId = item.getAttribute('href'); 
+        const targetId = item.getAttribute('href');
         document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
     });
+});
+
+// Cerrar el menú si se hace clic fuera de él
+document.addEventListener('click', (event) => {
+    if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+        nav.classList.remove('show');
+    }
 });
 
 document.getElementById('formContacto').addEventListener('submit', function(event){

@@ -46,24 +46,38 @@ nav {
     
 }
 .hamburger {
-    display: none;
+ /*   display: none;
     font-size: 24px;
+    cursor: pointer;*/
+    font-size: 30px; /* Aumenta el tamaño del icono */
+    width: 50px; /* Ajusta el ancho del botón */
+    height: 40px; /* Ajusta la altura para hacerlo más grande */
+    display: none;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    color: white; /* Color del icono */
+    border-radius: 5px; /* Bordes redondeados */
 }
 @media (max-width: 768px) {
     .hamburger {
         display: block;
     }
 
+    nav li {
+        font-size: 16px;
+    }
     /* Oculta el menú de navegación y las opciones extras */
     .nav {
         display: none; /* Oculto por defecto */
         flex-direction: column;
-        width: 100%;
+        width: 230px;
+        font-size: 15px;
         background-color: #5a189a; /* Color de fondo para el menú en móvil */
         position: absolute;
         top: 50px; /* Ajusta según el espacio que necesites */
         left: 0;
+        border-radius: 10px;
         z-index: 1;
     }
 
@@ -79,6 +93,10 @@ nav {
 
     .nav-links li {
         margin: 10px 0;
+    }
+    ul {
+        width: 160px;
+    
     }
 }
 .nav-links, .navbar-right {
@@ -112,6 +130,7 @@ ul {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
+
 }
 
 li {
@@ -249,6 +268,7 @@ h1 .titulo{
     top: 0; 
     width: 95%; 
     background-color: #1a0b7a;
+    border-radius: 20px;
     color: white;
     z-index: 1000;
     

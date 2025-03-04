@@ -416,40 +416,42 @@ p {
 }
 .caja2{
     display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 .tecno {
-    font-size: 17px;
-    background-color: #f4f4f4;
-    border: 5px solid #ccc;
-    border-radius: 37px;
-    background: linear-gradient(145deg, #9483d8, #af9cff);
-    box-shadow:  24px 24px 65px #7468aa,
-             -24px -24px 65px #d4bcff;
-    padding: 20px;
-    flex:1;
-    margin: 0 10px;
+    background-color: #c2a8f0;  /* Color inicial */
+    padding: 15px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    width: 160px; /* Tamaño ajustado */
+    height: 190px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 .tecno h2 {
-    margin-top: 0;
-}
-.tecno a{
-    display: block;
-    align-items: center;
-    background-color: #8a7aeb;
-    color: rgb(251, 251, 251);
-    padding: 10px 5px 10px 10px;
-    border-radius: 50px;
-    margin: 5px 0;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    font-weight: bold;
-}
-.tecno a:hover {
-    background-color: #8a7aeb;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
+.tecno img {
+    width: 70px;
+    height: auto;
+}
+
+/* Efecto al pasar el mouse */
+.tecno:hover {
+    background-color: #a186d6; /* Color más oscuro */
+    transform: scale(1.05); /* Pequeño aumento */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
 
 /* footer*/
 

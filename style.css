@@ -27,7 +27,6 @@ footer{
     padding: 10px 0;
     position: relative;
     justify-content: center;
-   /* background-color: #bfabf5;*/
 
 }
 /*header*/
@@ -40,24 +39,21 @@ nav {
     padding: 10px 20px;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;  /* Coloca los elementos a ambos lados */
-    align-items: center;  /* Alinea los elementos verticalmente */
-    box-sizing: border-box; /* Para asegurarse de que los elementos ocupen bien el espacio */
+    justify-content: space-between; 
+    align-items: center;  
+    box-sizing: border-box; 
     
 }
 .hamburger {
- /*   display: none;
-    font-size: 24px;
-    cursor: pointer;*/
-    font-size: 30px; /* Aumenta el tamaño del icono */
-    width: 50px; /* Ajusta el ancho del botón */
-    height: 40px; /* Ajusta la altura para hacerlo más grande */
+    font-size: 30px; 
+    width: 50px; 
+    height: 40px; 
     display: none;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: white; /* Color del icono */
-    border-radius: 5px; /* Bordes redondeados */
+    color: white; 
+    border-radius: 5px; 
 }
 @media (max-width: 768px) {
     .hamburger {
@@ -67,22 +63,21 @@ nav {
     nav li {
         font-size: 16px;
     }
-    /* Oculta el menú de navegación y las opciones extras */
     .nav {
-        display: none; /* Oculto por defecto */
+        display: none; 
         flex-direction: column;
         width: 230px;
         font-size: 15px;
-        background-color: #5a189a; /* Color de fondo para el menú en móvil */
+        background-color: #5a189a; 
         position: absolute;
-        top: 50px; /* Ajusta según el espacio que necesites */
+        top: 50px; 
         left: 0;
         border-radius: 10px;
         z-index: 1;
     }
 
     .nav.show {
-        display: flex; /* Muestra el menú cuando está activo */
+        display: flex; 
     }
 
     .nav-links, .navbar-right {
@@ -547,25 +542,29 @@ button {
     background-color: #8a7aeb;
     padding: 35px 35px 30px 30px;
 }
-.redes a{
-    display: block;
+.redes a {
+    display: flex;
     align-items: center;
-    background-color: #a492f0;
-    color: #f3dbff;
-    padding: 10px 5px 10px 10px;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 12px 15px;
     border-radius: 50px;
-    margin: 5px 0;
     text-decoration: none;
-    transition: background-color 0.3s;
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
+
 .redes a:hover {
-    background-color: #8a7aeb;
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #8a2be2, #4b0082);
 }
-.redes i{
-    margin-right: 10px;
-    font-size: 35px;
-    border-radius: 5px;
+
+.redes i {
+    font-size: 24px;
 }
+
 .redes h2 {
     background-color:#bfabf5;
 }
@@ -638,7 +637,8 @@ button {
     .personal, .iniciales, .tecno {
         font-size: 12px; 
         width: 100%; 
-        padding: 0px;
+        padding: 5px 0px 5px 0px;
+        padding-top: 10px;
         margin: 0px;
         margin-top: 10px;
     }
@@ -681,15 +681,20 @@ button {
     .caja-contacto {
         padding: 15px; 
         display: inline-block;
+        width: 80%;
     }
 
     form {
-        width: 90%; 
+        width: 100%; 
         margin: 10px 0; 
-        padding: 25px 25px 30px 5px;
+        padding: 20px 0px 20px 5px;;
         border-radius: 0px;
     }
 
+    .form-group {
+
+        padding: 10px;
+        }
     button {
         width: 100%;
     }

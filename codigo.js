@@ -12,6 +12,31 @@ themeToggle.addEventListener("click", () => {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const languageSelect = document.getElementById("language-select");
+
+    // Cargar el idioma guardado
+    const savedLanguage = localStorage.getItem("selectedLanguage");
+
+    // Si hay un idioma guardado, seleccionarlo en el dropdown
+    if (savedLanguage) {
+        languageSelect.value = savedLanguage;
+    }
+
+    // Manejar el cambio de idioma
+    languageSelect.addEventListener("change", function () {
+        const selectedLanguage = this.value;
+        localStorage.setItem("selectedLanguage", selectedLanguage); // Guardar idioma
+
+        // Redirigir según el idioma seleccionado
+        if (selectedLanguage === "en" && window.location.pathname !== "/index-en.html") {
+            window.location.href = "index-en.html";
+        } else if (selectedLanguage === "es" && window.location.pathname !== "/index.html") {
+            window.location.href = "index.html";
+        }
+    });
+});
+
 
 const hamburger = document.getElementById('hamburger');
 const nav = document.querySelector('.nav'); // Selecciona todo el contenedor nav

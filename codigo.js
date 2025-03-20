@@ -67,16 +67,25 @@ document.addEventListener('click', (event) => {
 document.getElementById('formContacto').addEventListener('submit', function(event) {
     event.preventDefault(); 
 
-    const nombre = document.getElementById('name').value;
     const mensajeAutomatico = document.getElementById('automensaje');
-
-    mensajeAutomatico.textContent = `¡Gracias por comunicarte, ${nombre}! Pronto me estaré comunicando con vos.`;
+    mensajeAutomatico.textContent = "¡Gracias por tu mensaje! Pronto me pondré en contacto contigo.";
     mensajeAutomatico.style.color = "blue";
 
-    setTimeout(() => {
-        this.submit(); 
-    }, 2000);
+    fetch(this.action, {
+        method: this.method,
+        body: new FormData(this)
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log("Formulario enviado con éxito");
+            this.reset();
+        } else {
+            console.error("Error al enviar el formulario");
+        }
+    })
+    .catch(error => console.error("Error en la solicitud:", error));
 });
+
 
 
 

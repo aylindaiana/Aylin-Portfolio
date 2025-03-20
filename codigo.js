@@ -64,24 +64,20 @@ document.addEventListener('click', (event) => {
     }
 });
 
-document.getElementById('formContacto').addEventListener('submit', function(event){
-    event.preventDefault();
+document.getElementById('formContacto').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const nombre = document.getElementById('name').value;
     const mensajeAutomatico = document.getElementById('automensaje');
 
-mensajeAutomatico.textContent = '¡Gracias por comunicarte '+ nombre + '! Pronto Me estaré comunicando con vos.';
-mensajeAutomatico.style.color = "blue";
-})
+    mensajeAutomatico.textContent = `¡Gracias por comunicarte, ${nombre}! Pronto me estaré comunicando con vos.`;
+    mensajeAutomatico.style.color = "blue";
 
-const nombre = document.getElementById('name').value;
-const mail = document.getElementById('mail').value;
-const mensaje = document.getElementById('message').value;
+    setTimeout(() => {
+        this.submit(); 
+    }, 2000);
+});
 
-console.log('Nombre: ', nombre);
-console.log('Correo Electronico: ', mail);
-console.log('Mensaje: ', mensaje);
-
-
-document.getElementById('formContacto').reset();
 
 
 

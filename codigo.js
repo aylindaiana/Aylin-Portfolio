@@ -63,30 +63,31 @@ document.addEventListener('click', (event) => {
         nav.classList.remove('show');
     }
 });
-
 document.getElementById('formContacto').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita la redirección
+    event.preventDefault(); 
 
     const form = this;
     const formData = new FormData(form);
 
+    const jsonData = {}; 
+    formData.forEach((value, key) => { 
+        jsonData[key] = value; 
+    });
+
     fetch('https://formsubmit.co/ajax/b96642c7dcd812c1d2bbac7b2e562bd0', {
         method: 'POST',
-        body: formData
-    }).then(response => response.json())
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(jsonData)
+    })
+    .then(response => response.json())
     .then(data => {
         document.getElementById('automensaje').textContent = "¡Gracias por comunicarte! Pronto te responderé.";
         document.getElementById('automensaje').style.color = "blue";
-        form.reset(); // Limpia el formulario
-    }).catch(error => {
+        form.reset(); // Limpia el formulario después de enviar
+    })
+    .catch(error => {
         console.error('Error:', error);
         document.getElementById('automensaje').textContent = "Hubo un error, intenta nuevamente.";
         document.getElementById('automensaje').style.color = "red";
     });
 });
-
-
-
-
-
-

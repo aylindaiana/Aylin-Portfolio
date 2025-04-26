@@ -15,11 +15,11 @@ body {
 }
 body.dark-mode {
     background-color: #333;
-    color: white;
+    color: rgb(205, 168, 199);
 }
 
 body.light-mode {
-    background-color: #fff;
+    background-color: #d1b2d2;
     color: black;
 }
 footer{

@@ -735,69 +735,65 @@ button {
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
     background-color: #6a0dad; /* Fondo cambia */
     color: white; /* Ícono cambia */
-}
-
-
-/* Contenedor que oculta los íconos fuera de la vista */
+}/* Contenedor principal */
 .tech-icons-wrapper {
-    overflow: hidden; 
-    width: 100%; 
-    height: 100px; 
+    overflow: hidden;
+    width: 100%;
     position: relative;
-}
-
-/* Contenedor de los íconos con animación */
-.tech-icons {
-    display: flex; 
-    justify-content: start; 
+    background: #bfabf5; /* Tu color lila */
+    padding: 20px 0;
+  }
+  
+  /* Línea de íconos */
+  .tech-icons {
+    display: flex;
     align-items: center;
-    position: absolute;
-    white-space: nowrap;
-    animation: scroll 15s linear infinite; 
-}
-
-.tech-icons img {
-    flex: 0 0 auto; 
-    width: 80px; 
+  }
+  
+  /* Cinta animada */
+  .tech-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+  }
+  
+  /* Íconos individuales */
+  .tech-track img {
+    width: 80px;
     height: 80px;
-    margin: 0 20px; 
-    filter: invert(1); 
-    transition: transform 0.3s ease; 
-}
-
-.tech-icons img:hover {
-    transform: scale(1.2); 
-}
-
-@keyframes scroll {
+    margin: 0 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efecto hover */
+  .tech-track img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Animación infinita */
+  @keyframes scroll {
     0% {
-        transform: translateX(100%); 
+      transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); 
+      transform: translateX(-50%);
     }
-}
-
-@media (max-width: 768px) {
-    .contact-icons a {
-        font-size: 20px;
-        margin: 0 8px; 
+  }
+  
+  /* Responsive - Tablets */
+  @media (max-width: 768px) {
+    .tech-track img {
+      width: 60px;
+      height: 60px;
+      margin: 0 20px;
     }
-
-    .tech-icons img {
-        width: 60px;
-        height: 60px;
+  }
+  
+  /* Responsive - Móviles */
+  @media (max-width: 480px) {
+    .tech-track img {
+      width: 50px;
+      height: 50px;
+      margin: 0 15px;
     }
-}
-
-@media (max-width: 480px) {
-    .contact-icons a {
-        font-size: 18px;
-        margin: 0 5px;
-    }
-
-    .tech-icons img {
-        width: 50px;
-        height: 50px;
-    }
-}
+  }
+  

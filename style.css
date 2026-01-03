@@ -385,22 +385,40 @@ h1 .titulo{
 }
 .maqueta {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
+    flex-wrap: wrap;   
     margin: 20px 0;
+    gap: 20px;    
 }
+
 .iniciales {
     font-size: 17px;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
     border-radius: 37px;
-background: linear-gradient(145deg, #9483d8, #af9cff);
-box-shadow:  24px 24px 33px #7063a3,
-             -24px -24px 33px #d8c1ff;
-    
+    background: linear-gradient(145deg, #9483d8, #af9cff);
     padding: 20px;
-    flex:1;
-    margin: 0 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) ;
+    margin: 0;  
+    
+    flex: 1 1 350px; 
+    max-width: 450px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-sizing: border-box;
+}
+.iniciales img {
+    max-width: 100%;
+    height: auto; 
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px; 
+}
+.iniciales img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;  
+    border-radius: 8px; 
 }
 .iniciales h2 {
     margin-top: 0;
@@ -626,41 +644,40 @@ button {
 
 }
 /*----------BODY--------------*/
+
 @media (max-width: 768px) {
-    .titulo-principal {
-        font-size: 30px; 
+.sobre-mi, .maqueta {
+        flex-direction: column;
+        align-items: center; 
+        padding: 10px;
     }
 
-    .sobre-mi {
-        flex-direction: column; 
+    .personal, .iniciales {
+        width: 90%;      
+        max-width: 350px; 
+        margin-bottom: 20px;
+        padding: 20px;   
+        font-size: 15px;  
     }
 
-    .personal, .iniciales, .tecno {
-        font-size: 12px; 
-        width: 100%; 
-        padding: 5px 0px 5px 0px;
-        padding-top: 10px;
-        margin: 0px;
-        margin-top: 10px;
+    .iniciales img {
+        width: 100% !important;
+        height: auto;
+        border-radius: 15px; 
+        margin: 15px 0;
     }
-  
-    .maqueta {
-        flex-direction: column; 
+
+    .caja2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
+        padding: 10px;
     }
-    .caja2{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 10px; 
-    margin-bottom: 20px; /
-    }
-    .tecno{
-        height: fit-content;
-        box-sizing: border-box; 
-    padding: 10px; 
-    border: 1px solid #ccc; 
-    }
-    img {
-        width: 50px;
+
+    .tecno {
+        width: auto; 
+        height: auto;
+        padding: 15px;
     }
 }
 @media (max-width: 480px) {
